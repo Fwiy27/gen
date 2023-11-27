@@ -12,7 +12,7 @@ files = main.cpp \
 cpp:
 	cd ${workdir}
 	g++ --std=c++20 ${files} -o main
-	./main
+	# ./main
 	# make clean
 
 clean:

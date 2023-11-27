@@ -7,4 +7,5 @@ using namespace std;
 int main()
 {
     Generator g;
+    g.ui();
 }
