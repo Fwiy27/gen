@@ -1,20 +1,24 @@
-workdir=~/bench/generator
-
 files = main.cpp \
-		Classes/Random/Random.cpp \
-		Classes/Name/Name.cpp \
-		Classes/City/City.cpp \
-		Classes/Date/Date.cpp \
-		Classes/Email/Email.cpp \
-		Classes/Password/Password.cpp \
+		Classes/FileParser/FileParser.cpp \
 		Classes/Chooser/Chooser.cpp \
+		Classes/Name/Name.cpp \
+		Classes/Location/Location.cpp \
+		Classes/Password/Password.cpp \
+		Classes/Random/Random.cpp \
+		Classes/Email/Email.cpp \
+		Classes/Date/Date.cpp \
 		Classes/Generator/Generator.cpp
+
 cpp:
-	cd ${workdir}
-	g++ --std=c++20 ${files} -o main
-	# ./main
-	# make clean
+	make build
+	make run
+	make clean
+
+build:
+	g++ --std=c++14 ${files} -o main
+
+run:
+	./main
 
 clean:
-	cd ${workdir}
 	rm main
