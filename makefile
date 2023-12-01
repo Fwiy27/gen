@@ -15,10 +15,17 @@ cpp:
 	make clean
 
 build:
-	g++ --std=c++14 ${files} -o main
+	g++ --std=c++20 ${files} -o main
 
 run:
 	./main
 
 clean:
 	rm main
+
+docker:
+	docker build -t gen .
+
+# rd = Run Docker
+rd:
+	docker run -it --rm gen
