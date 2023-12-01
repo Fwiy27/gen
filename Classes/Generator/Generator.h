@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <cstdlib>
 
 #include "../Random/Random.h"
 #include "../Chooser/Chooser.h"

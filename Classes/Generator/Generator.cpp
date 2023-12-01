@@ -17,9 +17,12 @@ void Generator::generator()
     cout << "----------------------------------------------------" << endl;
 }
 
-void Generator::clearScreen()
-{
-    cout << "\033[2J\033[1;1H";
+void Generator::clearScreen() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
 }
 
 void Generator::details()
